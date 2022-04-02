@@ -6,9 +6,7 @@ export default function AddBook() {
       <h3>ADD NEW BOOK</h3>
       <form>
         <input type="text" placeholder="Book Title" />
-        <select key="author">
-          <option value="Category">all authors</option>
-        </select>
+        <input type="text" placeholder="Book Author" />
         <button type="submit">Add Book</button>
       </form>
     </>

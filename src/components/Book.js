@@ -4,7 +4,6 @@ import Proptypes from 'prop-types';
 export default function Book({ book }) {
   return (
     <div className="bookInfo">
-      <p className="genre">{book.genre}</p>
       <p className="title">{book.title}</p>
       <p className="author">{book.author}</p>
       <button type="button">Remove</button>
