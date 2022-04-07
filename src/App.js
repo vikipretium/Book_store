@@ -6,8 +6,6 @@ import Books from './components/Books';
 import Categories from './components/Categories';
 
 import { connect } from 'react-redux';
-import dispatchToProps from './Redux/dispatchToProps';
-import stateToProps from './Redux/stateToProps';
 
 const books = [
   {
@@ -21,7 +19,7 @@ const books = [
   },
 ];
 
-function App() {
+const App = () => {
   return (
     <div>
       <NavBar />
@@ -31,5 +29,6 @@ function App() {
       </Routes>
     </div>
   );
-}
-export default connect(stateToProps, dispatchToProps)(App);
+};
+
+export default App;
