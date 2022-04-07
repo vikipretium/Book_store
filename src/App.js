@@ -5,6 +5,10 @@ import NavBar from './components/NavBar';
 import Books from './components/Books';
 import Categories from './components/Categories';
 
+import { connect } from 'react-redux';
+import dispatchToProps from './Redux/dispatchToProps';
+import stateToProps from './Redux/stateToProps';
+
 const books = [
   {
     id: 1,
@@ -17,7 +21,7 @@ const books = [
   },
 ];
 
-export default function App() {
+function App() {
   return (
     <div>
       <NavBar />
@@ -28,3 +32,4 @@ export default function App() {
     </div>
   );
 }
+export default connect(stateToProps, dispatchToProps)(App);
