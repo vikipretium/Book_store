@@ -3,9 +3,9 @@ import Proptypes from 'prop-types';
 
 export default function Book({ book }) {
   return (
-    <div className="bookInfo">
-      <p className="title">{book.title}</p>
-      <p className="author">{book.author}</p>
+    <div>
+      <p>{book.title}</p>
+      <p>{book.author}</p>
       <button type="button">Remove</button>
     </div>
   );
