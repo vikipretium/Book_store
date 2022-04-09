@@ -6,7 +6,7 @@ import Books from './components/Books';
 import Categories from './components/Categories';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { booksLoad } from './Redux/Books/Books';
+import { booksLoad } from './Redux/books/books';
 
 const App = () => {
   const dispatch = useDispatch();
