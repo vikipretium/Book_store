@@ -14,8 +14,10 @@ const Books = () => {
           <Book
             key={book.id}
             bookIndex={i}
+            bookId={book.id}
             title={book.title}
             author={book.author}
+            category={book.type}
           />
         ))
       )}
