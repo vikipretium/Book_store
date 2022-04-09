@@ -1,6 +1,7 @@
 import { useSelector, shallowEqual } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
+import './Books.css';
 
 const Books = () => {
   const books = useSelector((state) => state.booksReducer.books, shallowEqual);
@@ -8,7 +9,7 @@ const Books = () => {
   return (
     <>
       {!books.length ? (
-        <p>there are no books added yet.</p>
+        <p className="empty-books-msg">there are no books added yet.</p>
       ) : (
         books.map((book, i) => (
           <Book

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Categories.css';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 
@@ -17,7 +17,7 @@ const Categories = () => {
       >
         Check status
       </button>
-      <p>{status}</p>
+      <p id="categories-msg">{status}</p>
     </>
   );
 };
