@@ -1,12 +1,11 @@
-import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import { useDispatch } from 'react-redux';
 import NavBar from './components/NavBar';
 import Books from './components/Books';
 import Categories from './components/Categories';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { booksLoad } from './Redux/books/books';
+import { booksLoad } from './redux/books/books';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -14,13 +13,13 @@ const App = () => {
     dispatch(booksLoad());
   }, []);
   return (
-    <BrowserRouter>
+    <>
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 };
 
