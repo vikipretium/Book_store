@@ -1,11 +1,16 @@
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/roboto-slab-2');
+
+body {
+  background: #fafafa;
 }
 
-.mainNav {
-  display: flex;
-  flex-direction: row;
+p {
+  margin-block-start: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
