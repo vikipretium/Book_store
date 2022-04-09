@@ -18,19 +18,16 @@ export const addBook = (book) => (dispatch) => {
 
 export const booksLoad = () => (dispatch) => {
   dispatch({ type: LOAD_BOOKS });
-  loadBooks().then((books) =>
-    dispatch({
-      type: BOOKS_LOADED,
-      payload: books,
-    })
-  );
+  loadBooks().then((books) => dispatch({
+    type: BOOKS_LOADED,
+    payload: books,
+  }));
 };
 
 export const bookRemove = (index, id) => (dispatch) => {
   dispatch({ type: REMOVE_BOOK });
   removeBook(id).then((status) => {
-    if (status === 201 || status === 200)
-      dispatch({ type: BOOK_REMOVED, payload: index });
+    if (status === 201 || status === 200) dispatch({ type: BOOK_REMOVED, payload: index });
   });
 };
 
