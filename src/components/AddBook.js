@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
+import './AddBook.css';
 
 const AddBook = ({ id }) => {
   const [title, setTitle] = useState('');
@@ -50,12 +51,12 @@ const AddBook = ({ id }) => {
         required
       />
       <select
-        value={type.length ? type : 'select your category'}
+        value={type.length ? type : 'CATEGORY'}
         onChange={(e) => setType(e.target.value)}
         name="categories"
       >
-        <option value="select your category" disabled>
-          select your category
+        <option className="selected" value="CATEGORY" disabled>
+          CATEGORY
         </option>
         {categories.map((category) => (
           <option key={category} value={category}>
@@ -63,7 +64,7 @@ const AddBook = ({ id }) => {
           </option>
         ))}
       </select>
-      <button type="submit">Add Book</button>
+      <button type="submit">ADD BOOK</button>
     </form>
   );
 };
